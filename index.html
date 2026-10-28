@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>genasvinofarm | AI digital artist (18+)</title>
+<meta name="description" content="genasvinofarm: AI digital artist making NSFW and SFW furry and character art for adults. Commissions, friends, support. 18+ only.">
+<meta name="rating" content="adult">
+<meta name="rating" content="RTA-5042-1996-1400-1577-RTA">
+<meta property="og:title" content="genasvinofarm | AI digital artist (18+)">
+<meta property="og:description" content="NSFW and SFW furry and character art commissions. Adults only.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#050505">
+<link rel="icon" type="image/png" href="avatar.png">
+<link rel="stylesheet" href="style.css">
+<script>try{if(localStorage.getItem("age18")!=="yes")document.documentElement.classList.add("gate-on")}catch(e){document.documentElement.classList.add("gate-on")}</script>
+</head>
+<body class="is-loading">
+
+<div class="preloader" id="preloader" aria-hidden="true"><span class="mono">genasvinofarm<i class="cursor"></i></span></div>
+
+<div class="gridlines" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#home" data-nav><img src="avatar.png" alt="" width="22" height="22"><span>genasvinofarm</span></a>
+  <nav class="nav-links mono" aria-label="Sections">
+    <a href="#home" data-nav data-go="home">Home</a>
+    <a href="#commissions" data-nav data-go="commissions">Commissions</a>
+    <a href="#friends" data-nav data-go="friends">Friends</a>
+    <a href="#support" data-nav data-go="support">Support</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <canvas class="ascii" id="ascii" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <div class="portrait" id="portrait">
+        <div class="tilt">
+          <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
+          <button class="avatar" type="button" id="avatar-btn" aria-label="genasvinofarm avatar">
+            <span class="fallback" aria-hidden="true">G</span>
+            <img src="avatar.png" alt="genasvinofarm avatar" onload="this.parentElement.classList.add('loaded')" onerror="this.remove()">
+          </button>
+          <div class="p-name">genasvinofarm</div>
+          <div class="p-bar"></div>
+          <div class="p-tag mono">[ AI DIGITAL ARTIST / 18+ ]</div>
+        </div>
+      </div>
+
+      <div class="copy">
+        <p class="kicker mono rv" style="--i:0"><span id="kicker"></span></p>
+        <h1 class="rv" style="--i:1">AI art with <em>character</em>.</h1>
+        <p class="lead rv mono" style="--i:2" id="about"></p>
+        <ul class="chips rv mono" style="--i:3" id="tags"></ul>
+        <div class="btns rv" style="--i:4">
+          <a class="btn solid mono" href="#commissions" data-nav data-go="commissions">See commissions</a>
+          <button class="btn line mono discord" type="button" data-discord title="Click to copy my Discord username"><span class="dot"></span>Discord: <b data-discord-name></b></button>
+          <a class="btn line mono" id="da-btn" href="https://www.deviantart.com/genasvinofarm" target="_blank" rel="noopener noreferrer">My DeviantArt ↗</a>
+          <a class="btn line mono" href="#friends" data-nav data-go="friends">Friends</a>
+          <a class="btn line mono" href="#support" data-nav data-go="support">Support</a>
+        </div>
+        <p class="note mono rv" style="--i:5">18+ site. NSFW and SFW commissions open. Adult characters only.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL WITH TABS -->
+  <section class="panel-wrap" id="panel-anchor">
+    <p class="kicker mono">EXPLORE</p>
+    <div class="panel" id="panel">
+      <div class="tabrow mono" role="tablist" id="tabrow">
+        <span class="tabrow-label">MENU</span>
+        <button role="tab" data-tab="commissions" id="t-commissions" aria-controls="commissions">Commissions</button>
+        <button role="tab" data-tab="friends" id="t-friends" aria-controls="friends">Friends</button>
+        <button role="tab" data-tab="support" id="t-support" aria-controls="support">Support</button>
+        <i class="tab-ink" id="ink"></i>
+      </div>
+
+      <div class="panes">
+        <section class="pane" id="commissions" role="tabpanel" aria-labelledby="t-commissions">
+          <h2>Commissions</h2>
+          <p class="sub mono" id="comm-note"></p>
+          <button class="btn solid mono discord-big" type="button" data-discord><span class="dot"></span>DM on Discord: <b data-discord-name></b></button>
+          <div class="cols" id="tiers"></div>
+          <p class="foot-note mono" id="comm-fine"></p>
+        </section>
+
+        <section class="pane" id="friends" role="tabpanel" aria-labelledby="t-friends">
+          <h2>Friends</h2>
+          <p class="sub mono">Artists and accounts I love, sorted by DeviantArt watchers. Go say hi.</p>
+          <div class="cols friends" id="friend-grid"></div>
+        </section>
+
+        <section class="pane" id="support" role="tabpanel" aria-labelledby="t-support">
+          <h2>Support</h2>
+          <p class="sub mono">If you like what I make, you can leave a tip. Thank you!</p>
+          <div class="pay" id="donate"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot mono">
+  <span id="year"></span>
+  <span>genasvinofarm / made with care and a lot of GPU time</span>
+</footer>
+
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate-box">
+    <div class="gate-tabrow mono"><span>AGE CHECK</span><span class="gate-18">18+</span></div>
+    <div class="gate-body">
+      <p class="kicker mono">ADULTS ONLY / NSFW CONTENT AHEAD</p>
+      <h2 id="gate-title">Are you <em>18</em> or older?</h2>
+      <p class="mono gate-txt">This site is about adult art, including NSFW furry and character commissions. By entering you confirm that you are at least 18 years old and that viewing adult content is legal where you live.</p>
+      <div class="btns">
+        <button class="btn solid mono" type="button" id="gate-yes">Enter, I am 18+</button>
+        <button class="btn line mono" type="button" id="gate-no">Leave</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+<div class="wipe" id="wipe" aria-hidden="true"></div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
